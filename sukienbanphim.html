@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doraemon</title>
+</head>
+<body onload="docReady()">
+<form>
+    <img id='doraemon' src="tải%20xuống.jpg" style="position:absolute;left: 0px;top: 0px" height="150" width="200">
+</form>
+<script>
+    function nutlen() {
+        let element = document.getElementById('doraemon')
+        element.style.top = parseInt(element.style.top) - 5 + 'px'
+    }
+    function nutxuong() {
+        let element = document.getElementById('doraemon')
+        element.style.top = parseInt(element.style.top) + 5 + 'px'
+    }
+    function nutsangtrai() {
+        let element = document.getElementById('doraemon')
+        element.style.left = parseInt(element.style.left) - 5 + 'px'
+    }
+    function nutsangphai() {
+        let element = document.getElementById('doraemon')
+        element.style.left = parseInt(element.style.left) + 5 + 'px'
+    }
+    function dichuyen(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                nutsangtrai()
+                break
+            case 39:
+                nutsangphai()
+                break
+            case 38:
+                nutlen()
+                break
+            case 40:
+                nutxuong()
+                break
+        }
+    }
+    function docReady() {
+        window.addEventListener('keydown', dichuyen)
+        // trình duyệt nge/bắt sự kiện ấn phím
+    }
+</script>
+</body>
+</html>

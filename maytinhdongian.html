@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính</title>
+</head>
+<body>
+<form>
+    <table>
+    <tr>
+        <td colspan="4"><input type="text" disabled id="tinhtoan" value=""></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="1" onclick="calculator(value)"></td>
+        <td><input type="button" value="2" onclick="calculator(value)"></td>
+        <td><input type="button" value="3" onclick="calculator(value)"></td>
+        <td><input type="button" value="+" onclick="calculator(value)"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="4" onclick="calculator(value)"></td>
+        <td><input type="button" value="5" onclick="calculator(value)"></td>
+        <td><input type="button" value="6" onclick="calculator(value)"></td>
+        <td><input type="button" value="-" onclick="calculator(value)"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="7" onclick="calculator(value)"></td>
+        <td><input type="button" value="8" onclick="calculator(value)"></td>
+        <td><input type="button" value="9" onclick="calculator(value)"></td>
+        <td><input type="button" value="*" onclick="calculator(value)"></td>
+    </tr>
+    <tr>
+        <td><input type="reset" value="C"></td>
+        <td><input type="button" value="0" onclick="calculator(value)"></td>
+        <td><input type="button" value="=" onclick="calculator1()"></td>
+        <td><input type="button" value="/" onclick="calculator(value)"></td>
+    </tr>
+    </table>
+</form>
+<script>
+    function calculator(value) {
+        document.getElementById('tinhtoan').value += value
+    }
+    function calculator1() {
+        document.getElementById('tinhtoan').value = eval(document.getElementById('tinhtoan').value)
+}
+
+</script>
+</body>
+</html>

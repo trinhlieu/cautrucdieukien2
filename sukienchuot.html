@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sự kiện chuột</title>
+</head>
+<body>
+<form>
+    <img id='myImage' src="https://static6.depositphotos.com/1007347/574/v/600/depositphotos_5749760-stock-illustration-football.jpg" style="height: 100px ; width: 100px">
+    <p>Bấm nút để di chuyển quả bóng sang phải</p>
+    <input type="button" value="Click me" onclick="moveRight()">
+</form>
+<script>
+    let imbObj;
+    imbObj = document.getElementById('myImage')
+    function init() {
+        imbObj = document.getElementById('myImage')
+        imbObj.style.position = 'relative'
+        imbObj.style.left = '0px'
+    }
+    function moveRight() {
+        imbObj.style.left = parseInt(imbObj.style.left) + 50 + 'px'
+    }
+    window.onload = init
+</script>
+</body>
+</html>
